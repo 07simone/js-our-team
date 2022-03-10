@@ -32,12 +32,24 @@ const team = [
 ];
 
 
-for(let key in team){
+/* for(let key in team){
     console.log(team[key]);
-}  
-/* console.log(team) */
-console.log(team[1].name)
+}   */
+/* console.log(team)  */
 
-document.getElementById("descrizione").innerHTML = (team[0].name + team[0].role);
+/* let lista =[] */
+for( i = 0; i < team.length; i++){
+    console.log(team[i])
+    document.getElementById("immagini").innerHTML += `  
+    <div class="membri text-center">
+    <img src="img/${team[i].image}" alt="">
+        <h2>${team[i].name}</h2>
+        <p>${team[i].role}</p>
+        
+    </div>`
+}
+
+
+/* 
 document.getElementById("descrizione2").innerHTML= (team[1].name + team[1].role);
-document.getElementById("descrizione3").innerHTML= (team[2].name + team[2].role);
+document.getElementById("descrizione3").innerHTML= (team[2].name + team[2].role); */
